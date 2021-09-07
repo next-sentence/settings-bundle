@@ -9,4 +9,4 @@ sylius_ui:
         sylius.admin.layout.javascripts:
             blocks:
                 lwc_settings:
-                    template: '@LwcSettingsBundle/Layout/_javascripts.html.twig'
+                    template: '@LwcSettings/Layout/_javascripts.html.twig'

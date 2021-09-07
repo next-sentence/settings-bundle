@@ -50,7 +50,7 @@ final class SettingsFormMenuBuilder
 
         $menu
             ->addChild('default')
-            ->setAttribute('template', '@LwcSettingsBundle/Crud/Edit/Tab/_default.html.twig')
+            ->setAttribute('template', '@LwcSettings/Crud/Edit/Tab/_default.html.twig')
             ->setLabel('lwc.settings.ui.by_default')
             ->setCurrent(true)
             ->setExtra('settings', $options['settings'])

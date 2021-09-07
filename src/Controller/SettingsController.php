@@ -47,7 +47,7 @@ final class SettingsController extends AbstractController
      */
     public function indexAction(RegistryInterface $registry)
     {
-        return $this->render('@LwcSettingsBundle/Crud/index.html.twig', [
+        return $this->render('@LwcSettings/Crud/index.html.twig', [
             'settings' => $registry->getAllSettings(),
         ]);
     }
@@ -79,7 +79,7 @@ final class SettingsController extends AbstractController
         }
 
         return $this->render(
-            '@LwcSettingsBundle/Crud/edit.html.twig',
+            '@LwcSettings/Crud/edit.html.twig',
             [
                 'settings' => $settings,
                 'form_event' => 'lwc.settings.form',
