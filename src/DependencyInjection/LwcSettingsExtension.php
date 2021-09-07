@@ -7,10 +7,9 @@ namespace Lwc\SettingsBundle\DependencyInjection;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
-use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-final class LwcSettingsExtension extends Extension implements PrependExtensionInterface
+final class LwcSettingsExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -28,18 +27,5 @@ final class LwcSettingsExtension extends Extension implements PrependExtensionIn
     public function getAlias()
     {
         return str_replace('monsieur_biz', 'lwc', parent::getAlias());
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function prepend(ContainerBuilder $container): void
-    {
-        $doctrineConfig = $container->getExtensionConfig('doctrine_migrations');
-        $container->prependExtensionConfig('doctrine_migrations', [
-            'migrations_paths' => array_merge(array_pop($doctrineConfig)['migrations_paths'] ?? [], [
-                'Lwc\SettingsBundle\Migrations' => '@LwcSettingsBundle/Migrations',
-            ]),
-        ]);
     }
 }
