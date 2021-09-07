@@ -1,0 +1,12 @@
+sylius_ui:
+    events:
+        lwc.settings.admin.update:
+            blocks:
+                _content: '@LwcSettings/Crud/Edit/_content.html.twig'
+        lwc.settings.admin.update.form:
+            blocks:
+                _form: '@LwcSettings/Crud/Edit/_form.html.twig'
+        sylius.admin.layout.javascripts:
+            blocks:
+                lwc_settings:
+                    template: '@LwcSettingsBundle/Layout/_javascripts.html.twig'

@@ -1,0 +1,18 @@
+{% import '@SyliusUi/Macro/messages.html.twig' as messages %}
+
+{% set index_url = '' %}
+
+<div class="ui segment">
+    {{ form_start(form, {'attr': {'class': 'ui loadable form', 'novalidate': 'novalidate'}}) }}
+    <input type="hidden" name="_method" value="PUT" />
+    {% if form.vars.valid == false %}
+        {{ messages.error('sylius.ui.this_message_contains_errors') }}
+    {% endif %}
+
+    {{ sylius_template_event('lwc.settings.admin.update.form', _context) }}
+
+    {% include '@SyliusUi/Form/Buttons/_update.html.twig' with {'paths': {'cancel': index_url}} %}
+
+    {{ form_row(form._token) }}
+    {{ form_end(form, {'render_rest': false}) }}
+</div>

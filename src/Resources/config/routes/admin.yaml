@@ -1,0 +1,14 @@
+lwc_sylius_settings_admin_index:
+    path: settings
+    controller: Lwc\SettingsBundle\Controller\SettingsController::indexAction
+    methods: ['GET']
+
+lwc_sylius_settings_admin_edit:
+    path: settings/edit/{alias}
+    controller: Lwc\SettingsBundle\Controller\SettingsController::formAction
+    methods: ['GET']
+
+lwc_sylius_settings_admin_edit_post:
+    path: settings/edit/{alias}
+    controller: Lwc\SettingsBundle\Controller\SettingsController::formAction
+    methods: ['PUT']

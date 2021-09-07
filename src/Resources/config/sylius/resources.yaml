@@ -1,0 +1,7 @@
+sylius_resource:
+    resources:
+        lwc_settings.setting:
+            classes:
+                model: Lwc\SettingsBundle\Entity\Setting\Setting
+                repository: Lwc\SettingsBundle\Repository\SettingRepository
+                factory: Lwc\SettingsBundle\Factory\SettingFactory

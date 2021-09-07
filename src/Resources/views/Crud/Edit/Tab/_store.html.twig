@@ -1,0 +1,32 @@
+{% import '@SyliusUi/Macro/flags.html.twig' as flags %}
+{#{% set channel = item.extra('channel') %}#}
+{% set locales = item.extra('locales') %}
+<div class="ui tab" data-tab="channel">
+{#    <h3 class="ui top attached header">{{ channel.name }}</h3>#}
+    <div class="ui attached segment">
+        <div class="ui fluid accordion">
+{#            <div class="title active">#}
+{#                <i class="dropdown icon"></i>#}
+{#                {{ "lwc.settings.ui.form.title.channel_default_values"|trans({"%channelName%": channel.name}) }}#}
+{#            </div>#}
+{#            <div class="content active">#}
+{#                <p class="transition visible">#}
+{#                    {{ form_row(form['channel-' ~ channel.id ~ '-' ~ constant('Lwc\\SettingsBundle\\Settings\\Settings::DEFAULT_KEY')]) }}#}
+{#                </p>#}
+{#            </div>#}
+            {%  if item.extra('settings').showLocalesInForm %}
+                {% for locale in locales %}
+                    <div class="title" data-locale="{{ locale.code }}">
+                        <i class="dropdown icon"></i>
+                        {{ flags.fromLocaleCode(locale.code) }} {{ locale.code }}
+                    </div>
+                    <div class="content">
+                        <p class="transition hidden">
+                            {{ form_row(form['channel-0-' ~ locale.code]) }}
+                        </p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
