@@ -30,6 +30,7 @@
         "phpstan/phpstan": "^0.12.84"
     },
     "prefer-stable": true,
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Lwc\\SettingsBundle\\": "src/"
