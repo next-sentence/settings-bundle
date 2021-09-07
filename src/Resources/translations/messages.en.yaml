@@ -16,5 +16,5 @@ lwc:
             use_default_value: Use default value
             form:
                 title:
-                    sylius_default_values: Sylius' default values
+                    sylius_default_values: Apps' default values
                     channel_default_values: Default values for %channelName%
