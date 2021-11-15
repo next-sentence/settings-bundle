@@ -8,11 +8,11 @@
         "php": "~7.4 || ~8.0",
         "ext-mbstring": "*",
         "ext-json": "*",
-        "sylius/resource-bundle": "~1.8.0 || ~1.9.0 || ~1.10.0",
-        "sylius/grid-bundle": "~1.8.0 || ~1.9.0 || ~1.10.0",
-        "sylius/user-bundle": "~1.8.0 || ~1.9.0 || ~1.10.0",
-        "sylius/ui-bundle": "~1.8.0 || ~1.9.0 || ~1.10.0",
-        "sylius/locale-bundle": "~1.8.0 || ~1.9.0 || ~1.10.0"
+        "sylius/resource-bundle": "~1.6.0 || ~1.7.0 || ~1.8.0 || ~1.9.0 || ~1.10.0",
+        "sylius/grid-bundle": "~1.6.0 || ~1.7.0 || ~1.8.0 || ~1.9.0 || ~1.10.0",
+        "sylius/user-bundle": "~1.6.0 || ~1.7.0 || ~1.8.0 || ~1.9.0 || ~1.10.0",
+        "sylius/ui-bundle": "~1.6.0 || ~1.7.0 || ~1.8.0 || ~1.9.0 || ~1.10.0",
+        "sylius/locale-bundle": "~1.6.0 || ~1.7.0 || ~1.8.0 || ~1.9.0 || ~1.10.0"
     },
     "require-dev": {
         "phpspec/phpspec": "^6.1",
