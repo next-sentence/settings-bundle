@@ -102,7 +102,7 @@ class Setting implements SettingInterface
 
     /**
      * @var DateTimeInterface|null
-     * @ORM\Column(name="created_at", type="datetime_immutable")
+     * @ORM\Column(name="created_at", type="datetime")
      * @Gedmo\Timestampable(on="create")
      */
     protected $createdAt;
