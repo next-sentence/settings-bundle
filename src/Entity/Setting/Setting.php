@@ -114,6 +114,12 @@ class Setting implements SettingInterface
      */
     protected $updatedAt;
 
+    public function __construct()
+    {
+        $this->createdAt = new \DateTime();
+        $this->updatedAt = new \DateTime();
+    }
+
     /**
      * @return int|null
      */
