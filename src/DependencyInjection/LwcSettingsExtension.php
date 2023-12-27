@@ -24,7 +24,7 @@ final class LwcSettingsExtension extends Extension
         $loader->load('services.yaml');
     }
 
-    public function getAlias()
+    public function getAlias(): string
     {
         return str_replace('monsieur_biz', 'lwc', parent::getAlias());
     }
